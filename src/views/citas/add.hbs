@@ -39,7 +39,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr >
+    <tr data-selected="0">
       <th scope="row">1</th>
       <td>Mark</td>
       <td>Otto</td>
@@ -50,7 +50,7 @@
       </td>
 
     </tr>
-    <tr>
+    <tr data-selected="0">
       <th scope="row">2</th>
       <td>Jacob</td>
       <td>Thornton</td>
@@ -59,7 +59,7 @@
       <td> <button type="submit" class="btn btn-primary">Modificar</button>
       <button type="submit" class="btn btn-primary">Modificar</button></td>
     </tr>
-    <tr>
+    <tr data-selected="0">
       <th scope="row">3</th>
       <td colspan="2">Larry the Bird</td>
       <td>@twitter</td>
@@ -71,9 +71,13 @@
   </tbody>
   </table>
 
-   <div class="col-md-4 mb-3">
-                <label for="country">Country</label>
-                <select class="custom-select d-block w-100" id="country" required>
+  
+         
+<form class="row g-3"  action="../../form-result.php" method="post" target="_blank">
+     
+ <div class="col-md-4">
+                <label for="country" class="form-label">Country</label>
+                <select class="custom-select d-block w-100 h-50" id="country" required>
                   <option value="">Choose...</option>
                   <option>United States</option>
                 </select>
@@ -81,24 +85,25 @@
                   Please select a valid country.
                 </div>
     </div>
-         
-<form class="row g-3 needs-validation" novalidate>
-    
+
        <div class="col-md-4">
           <label for="date" class="form-label">Example date</label>
-          <input type="date" class="form-control" id="date">
+          <input type="date" class="form-control" id="date" required="required">
+          
        </div>
        
-          
+        
        <div class="col-md-4">
          <label for="time" class="form-label">Example time</label>
-          <input type="time" class="form-control" id="time">
-       </div>
-          
+          <input type="time" class="form-control" id="time"  min="08:00" max="18:00" step="1800">
      
-
+       </div>
+    <fieldset>
+     <button class="btn btn-primary" type="submit">Submit form</button>
+     <input type="reset" value="Reiniciar el formulario">
+     </fieldset> 
  </form>
-      <p></p>
+     {{!--  <p></p>
      <div class="col-12">
       <button class="btn btn-primary" type="submit">Submit form</button>
      </div
@@ -107,7 +112,14 @@
     <p>
       <label for="number">Example number</label>
       <input type="number" id="number">
-    </p>
+    </p> --}}
+
+ {{!-- <form action="../../form-result.php" method="post" target="_blank">
+  <p>
+    Adivina la hora de arribo: <input type="time" name="horaarribo" min="12:00" max="18:00" step="600">
+    <input type="submit" value="Enviar datos">
+  </p>
+</form> --}}
 
     </div> <!-- /container -->
   </body>
