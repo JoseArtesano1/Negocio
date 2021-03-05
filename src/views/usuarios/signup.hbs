@@ -1,0 +1,135 @@
+<body class="bg-light">
+
+    <div class="container">
+      <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+        <h2>NUEVO USUARIO</h2>
+        
+      </div>
+
+      <div class="row">
+        
+        <div class=" order-md-1">
+          <h4 class="mb-3">DATOS USUARIO</h4>
+          <form class="needs-validation" action="/signup" method="POST" novalidate>
+            <div class="row">
+              <div class=" mb-3">
+                <label for="firstName">Nombre</label>
+                <input type="text" class="form-control" name="Nombre" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Valid first name is required.
+                </div>
+              </div>
+              
+            </div>
+
+            <div class="mb-3">
+              <label for="username">Username</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">@</span>
+                </div>
+                <input type="text" class="form-control" name="UsuarioNombre" placeholder="Username" required>
+                <div class="invalid-feedback" style="width: 100%;">
+                  Your username is required.
+                </div>
+              </div>
+            </div>
+
+             <div class="mb-3">
+              <label for="Pass">Contraseña </label>
+              <input type="password" class="form-control" name="Pass">
+              <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+              </div>
+             </div>
+
+
+           <div class="row">
+             <div class= "col-md-6 mb-3">
+              <label for="dni">Dni/nie</label>
+              <input type="text" class="form-control" name="Dni" placeholder="1234w" required>
+              <div class="invalid-feedback">
+                Please enter your shipping address.
+              </div>
+             </div>
+
+             <div class= "col-md-6 mb-3">
+              <label for="mobile">Teléfono</label>
+              <input type="number" class="form-control" name="Telefono" placeholder="1234" required>
+              <div class="invalid-feedback">
+                Please enter your shipping address.
+              </div>
+             </div>
+
+           </div>
+            <div class="mb-3">
+              <label for="address">Dirección</label>
+              <input type="text" class="form-control" name="Direccion" placeholder="1234 Main St" required>
+              <div class="invalid-feedback">
+                Please enter your shipping address.
+              </div>
+            </div>
+   
+            <div class="mb-3">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" name="E_mail" placeholder="you@example.com">
+              <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+              </div>
+            </div>
+           
+          
+            <hr class="mb-4">
+
+            <h4 class="mb-3">Payment</h4>
+
+            
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="cc-name">Name on card</label>
+                <input type="text" class="form-control" name="NombreCard" placeholder="" required>
+                <small class="text-muted">Full name as displayed on card</small>
+                <div class="invalid-feedback">
+                  Name on card is required
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="cc-number">Credit card number</label>
+                <input type="number" class="form-control" name="NumeroCard" placeholder="" required>
+                <div class="invalid-feedback">
+                  Credit card number is required
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3 mb-3">
+                <label for="cc-expiration">Expiration</label>
+                <input type="text" class="form-control" name="fechaCard" placeholder="" required>
+                <div class="invalid-feedback">
+                  Expiration date required
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="cc-expiration">CVV</label>
+                <input type="number" class="form-control" name="CvvCard" placeholder="" required>
+                <div class="invalid-feedback">
+                  Security code required
+                </div>
+              </div>
+            </div>
+            <hr class="mb-4">
+            <button class="btn btn-success btn-block" type="submit">Continue to checkout</button>
+          </form>
+        </div>
+      </div>
+
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2017-2018 Company Name</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Privacy</a></li>
+          <li class="list-inline-item"><a href="#">Terms</a></li>
+          <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+      </footer>
+    </div>

@@ -1,0 +1,33 @@
+<div class="container p-4">
+  <div class="row">
+    {{#each tecnicos}}
+    <div class="col-md-3">
+        <div class="card text-center">
+            <div class="card-body">
+                
+                    <h3 class="card-title text-uppercase">
+                        {{Nombre}}
+                    </h3>
+                <p></p>
+                    <a href="/tecnicos/delete/{{idT_Tecnico}}" class="btn btn-danger">
+                        Delete Link
+                    </a>
+                    <a  href="/tecnicos/edit/{{idT_Tecnico}}" class="btn btn-secondary">
+                        Edit
+                    </a>
+            </div>
+        </div>
+    </div>
+    {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>There are not Tecnicos saved yet.</p>
+                <a href="/tecnicos/add">Create One!</a>
+            </div>
+        </div>
+
+    {{/each}}
+  </div>
+
+
+</div>

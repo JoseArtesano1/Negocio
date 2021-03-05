@@ -1,0 +1,48 @@
+
+<div class="container p-4">
+
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+
+            <div class="card">
+                <h5 class="col-md-3 mx-auto">Especialidad</h5>
+                <div class="card-body">
+                    <form action="/motivos/add" method="POST" name="formulario1"  id="form1">
+                        
+                        <div class="form-group mb-3">
+                            <input type="text" name="Denominacion" class="form-control" placeholder="Denominaciòn">
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="number" name="Duracion" class="form-control" placeholder="Minutos">
+                        </div>
+                        <div class="form-group mb-4"> 
+                            <label for="tecnic" class="form-label">tecnico</label>
+                              <select class="custom-select d-block w-100 h-100" id="tecnic" name="combo" required>
+                                <option value="">Choose...</option> 
+                               
+                                <script>
+                                   var array =[{{tec}}];                   
+                                   var t = document.getElementById("tecnic");
+                                  for( i in array){ 
+
+                                    t.innerHTML += "<option   value='"+i.Nombre+"'>"+i.Nombre+"</option>"; 
+                
+                                     }
+                                </script>
+                             </select> 
+
+                             
+                        </div>
+                           <div class="form-group mb-3">
+                            <button class="btn btn-success btn-block">
+                                Save
+                            </button>
+                           </div>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
