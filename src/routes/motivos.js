@@ -3,8 +3,10 @@ const pool = require('../database');
 const router= express.Router();
 const {isLoggedIn}= require('../lib/autoriza');
 
-router.get('/add',(req, res)=>{
-    res.render('motivos/add');
+router.get('/add',async(req, res)=>{
+  var tec= await  pool.query('SELECT Nombre FROM t_tecnico');
+  
+    res.render('motivos/add',{tecnico:tec});
    
 });
 
@@ -34,21 +36,18 @@ t.onchange = function(){
 }; */
 //var t = document.getElementById("tecnico");
  async function carga (){
+  var t = document.getElementById("tecnicos");
   
-  
-  var tec= await  pool.query('SELECT * FROM t_tecnico');
+  var tec= await  pool.query('SELECT Nombre FROM t_tecnico');
   for(tecnico in tec){
-    t.add(new Option(tecnico.Nombre));
+    t.add(new Option(tecnico));
+   
     
   }
   
 };
 
-router.get('/add', async(req, res)=>{
-  var tec= await  pool.query('SELECT * FROM t_tecnico');
-  
-  res.render('/add', {tec});
-})
+
 
 //select = document.getElementById("año");
 /* for(i = 2000; i <= 2050; i++){
@@ -57,5 +56,9 @@ router.get('/add', async(req, res)=>{
     option.text = i;
     select.appendChild(option);
 } */
+
+
+
+
 
 module.exports=router;

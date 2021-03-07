@@ -21,12 +21,41 @@
   <body>
     <div class="container">
 
-      <h1>Bootstrap grid examples</h1>
-      <p class="lead">Basic grid layouts to get you familiar with building within the Bootstrap grid system.</p>
+      <h1>Organiza tus citas</h1>
+     
 
-      <h3>Five grid tiers</h3>
-      <p>There are five tiers to the Bootstrap grid system, one for each range of devices we support. Each tier starts at a minimum viewport size and automatically applies to the larger devices unless overridden.</p>
+      <h3></h3>
+      <form class="row g-3"  action="../../form-result.php" method="post" target="_blank">
+     
+ <div class="col-md-4">
+                <label for="country" class="form-label">Motivo</label>
+                <select class="custom-select d-block w-100 h-50" id="country" required>
+                  <option value="">Choose...</option>
+                  <option>United States</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a valid country.
+                </div>
+    </div>
 
+       <div class="col-md-4">
+          <label for="date" class="form-label">Example date</label>
+          <input type="date" class="form-control" id="date" required="required">
+          
+       </div>
+       
+        
+       <div class="col-md-4">
+         <label for="time" class="form-label">Example time</label>
+          <input type="time" class="form-control" id="time"  min="08:00" max="18:00" step="1800">
+     
+       </div>
+    <fieldset>
+     <button class="btn btn-primary" type="submit">Submit form</button>
+     <input type="reset" value="Reiniciar el formulario">
+     </fieldset> 
+ </form>
+  <hr class="mb-4">
 <table class="table table-striped">
    <thead>
     <tr>
@@ -73,36 +102,7 @@
 
   
          
-<form class="row g-3"  action="../../form-result.php" method="post" target="_blank">
-     
- <div class="col-md-4">
-                <label for="country" class="form-label">Country</label>
-                <select class="custom-select d-block w-100 h-50" id="country" required>
-                  <option value="">Choose...</option>
-                  <option>United States</option>
-                </select>
-                <div class="invalid-feedback">
-                  Please select a valid country.
-                </div>
-    </div>
 
-       <div class="col-md-4">
-          <label for="date" class="form-label">Example date</label>
-          <input type="date" class="form-control" id="date" required="required">
-          
-       </div>
-       
-        
-       <div class="col-md-4">
-         <label for="time" class="form-label">Example time</label>
-          <input type="time" class="form-control" id="time"  min="08:00" max="18:00" step="1800">
-     
-       </div>
-    <fieldset>
-     <button class="btn btn-primary" type="submit">Submit form</button>
-     <input type="reset" value="Reiniciar el formulario">
-     </fieldset> 
- </form>
      {{!--  <p></p>
      <div class="col-12">
       <button class="btn btn-primary" type="submit">Submit form</button>
