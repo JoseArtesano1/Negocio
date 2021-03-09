@@ -2,11 +2,20 @@ const express= require('express');
 const pool = require('../database');
 const router= express.Router();
 const {isLoggedIn}= require('../lib/autoriza');
+var mysql = require('mysql');
+
+
+
+
+
+
+
 
 router.get('/add',async(req, res)=>{
-  var tec= await  pool.query('SELECT Nombre FROM t_tecnico');
+  var t= await  pool.query('SELECT * FROM t_tecnico');
   
-    res.render('motivos/add',{tecnico:tec});
+ 
+    res.render('motivos/add');
    
 });
 

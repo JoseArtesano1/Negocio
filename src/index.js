@@ -55,6 +55,7 @@ app.use('/citas',require('./routes/citas'));
 app.use('/authentication',require('./routes/authentication'));
 app.use('/tecnicos',require('./routes/tecnicos'));
 app.use('/motivos',require('./routes/motivos'));
+
 //Public
 app.use(express.static(path.join(__dirname, 'public')));
 
